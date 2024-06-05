@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/API_CarsDatabase_MySQL.iml" filepath="$PROJECT_DIR$/.idea/API_CarsDatabase_MySQL.iml" />
-      <module fileurl="file://$PROJECT_DIR$/crud/crud.iml" filepath="$PROJECT_DIR$/crud/crud.iml" />
     </modules>
   </component>
 </project>
