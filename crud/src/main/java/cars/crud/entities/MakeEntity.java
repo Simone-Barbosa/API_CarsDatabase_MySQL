@@ -6,14 +6,14 @@ import lombok.Setter;
 
 @Setter
 @Getter
-@Entity(name = "marca")
+@Entity(name = "make")
 public class MakeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_marca", nullable = false, unique = true)
+    @Column(name = "id_make", nullable = false, unique = true)
     private Long id;
 
-    @Column(name = "nome_marca", nullable = false)
+    @Column(name = "name_make", nullable = false)
     private String name;
 }

@@ -8,34 +8,34 @@ import java.util.List;
 
 @Setter
 @Getter
-@Entity(name = "carro")
+@Entity(name = "cars")
 public class CarsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_carro", nullable = false, unique = true)
+    @Column(name = "id_car", nullable = false, unique = true)
     private Long id;
 
-    @Column(name = "nome_carro", nullable = false)
+    @Column(name = "name_car", nullable = false)
     private String name;
 
-    @Column(name = "ano_fabricacao_carro", nullable = false)
+    @Column(name = "year_manufacturing", nullable = false)
     private Integer yearManufacture;
 
-    @Column(name = "ano_modelo_carro", nullable = false)
+    @Column(name = "year_model", nullable = false)
     private Integer yearModel;
 
-    @Column(name = "modelo_carro", nullable = false)
+    @Column(name = "model", nullable = false)
     private String model;
 
     @OneToOne
-    @JoinColumn
-    private  MakeEntity marca; // tem quer coincidir com: @Entity(name = "marca")
+    @JoinColumn(name = "make_id")
+    private  MakeEntity make;
 
     @ManyToMany
     @JoinTable(
-            name = "carro_cor",
-            joinColumns = @JoinColumn(name = "id_carro"),
-            inverseJoinColumns = @JoinColumn(name = "id_cor")
+            name = "car_color",
+            joinColumns = @JoinColumn(name = "id_car"),
+            inverseJoinColumns = @JoinColumn(name = "id_color")
     )
     private List<ColorEntity> colors;
 }
